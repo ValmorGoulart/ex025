@@ -4,6 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulário</title>
+        <style>
+            *{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            input.botao{
+                background-color: #f5f6d8;
+                color: #552138;
+                font-size: 18px;
+                font-weight: 500;
+                border-radius: 10px;
+            }
+        </style>
     </head>
     <body>
         <h1>Formulário Teste</h1>
@@ -15,6 +27,10 @@
         <p>
             <label for="isen">Senha</label>
             <input type="password" name="sen" id="isen">
+        </p>
+        <p>
+            <input type="submit" value="Enviar" class="botao">
+            <input type="reset" value="Limpar" class="botao">
         </p>
     </body>
 </html>
