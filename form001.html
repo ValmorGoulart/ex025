@@ -4,8 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulário</title>
+        <style>
+            *{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            input#enviar{
+                background-color: #f5f6d8;
+                color: #152648;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 5px 10px;
+                border-radius: 10px;
+            }
+        </style>
     </head>
     <body>
         <h1>Meu primeiro formulário</h1>
+        <form action="cadastro.php" method="post">
+            <p><label for="inome">Nome</label>: <input type="text" name="nome" id="inome"></p>
+            <p><label for="isobrenome">Sobrenome</label>: <input type="text" name="sobrenome" id="isobrenome"></p>
+            <p><input type="submit" value="Enviar" id="enviar"></p>
+        </form>
     </body>
 </html>
