@@ -12,6 +12,12 @@
                 width: 300px;
                 padding: 4px 10px;
             }
+            fieldset{
+                background-color: #e5f8f0;
+                border:  2px solid #95a2a8;
+                border-radius: 10px;
+                margin-bottom: 5px;
+            }
             .botao{
                 background-color: #f5f6d8;
                 color: #152138;
@@ -25,18 +31,25 @@
     <body>
         <h1>Exemplo de Formulário</h1>
         <form action="cadastro.php" method="post" autocomplete="on">
-            <p>
-                <label for="iemail">E-mail</label>
-                <input type="email" name="email" id="iemail" autocomplete="email" required>
-            </p>
-            <p>
-                <label for="itel">Telefone</label>
-                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^[0-9]{5}-\[0-9]{4}$" required>
-            </p>
-            <p>
-                <input type="submit" value="Enviar" class="botao">
-                <input type="reset" value="Limpar" class="botao">
-            </p>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="inome">Nome</label>
+                    <input type="text" name="nome" id="inome" maxlength="21" required size="22">
+                </p>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="itel">Telefone</label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^[0-9]{5}-\[0-9]{4}$" required>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar" class="botao">
+                    <input type="reset" value="Limpar" class="botao">
+                </p>
+            </fieldset>
         </form>
     </body>
 </html>
