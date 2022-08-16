@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulários</title>
+        <style>
+            form{
+                background-color: #d5f6f8;
+                border: 2px solid #95a2a8;
+                border-radius: 10px;
+                width: 400px;
+                padding: 10px 10px 5px 10px;
+            }
+            .botao{
+                background-color: #f5f6d8;
+                border: 1px solid #95a2a8;
+                border-radius: 10px;
+                font-size: 18px;
+                padding: 2px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de Formulário</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="iest">Estado</label>
+                <select name="estado" id="iest">
+                    <option value="" selected>-- Selecione --</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Contador</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                </datalist>
+
+            </p>
+            <p>
+                <label for="imsg">Mensagem:</label><br>
+                <textarea name="msg" id="imsg" cols="50" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Enviar" class="botao">
+                <input type="reset" value="Limpar" class="botao">
+            </p>
+        </form>
+    </body>
+</html>
